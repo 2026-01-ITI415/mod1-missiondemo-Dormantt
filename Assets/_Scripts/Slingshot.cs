@@ -33,6 +33,7 @@ public class Slingshot : MonoBehaviour{
  }
 
  void OnMouseDown(){
+    if (MissionDemolition.S != null && !MissionDemolition.S.SlingshotIsEnabled) return;
 
     aimingMode = true;
 
@@ -45,6 +46,10 @@ public class Slingshot : MonoBehaviour{
  void Update(){
 
     if (!aimingMode) return;
+    if (projectile == null){
+        aimingMode = false;
+        return;
+    }
 
     Vector3 mousePos2D = Input.mousePosition;
     mousePos2D.z = -Camera.main.transform.position.z;
@@ -68,8 +73,19 @@ public class Slingshot : MonoBehaviour{
         projRB.isKinematic = false;
         projRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
         projRB.linearVelocity = -mouseDelta * velocityMult;
+        if (MissionDemolition.S != null){
+            MissionDemolition.S.RegisterShot();
+        }
         FollowCam.POI = projectile;
         Instantiate<GameObject>(projLinePrefab, projectile.transform);
+        projectile = null;
+    }
+ }
+
+ public void CancelAiming(){
+    aimingMode = false;
+    if (projectile != null){
+        Destroy(projectile);
         projectile = null;
     }
  }

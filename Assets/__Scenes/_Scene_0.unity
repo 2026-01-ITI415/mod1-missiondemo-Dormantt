@@ -530,6 +530,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1513086667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513086669}
+  - component: {fileID: 1513086668}
+  m_Layer: 0
+  m_Name: _MissionDemolition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1513086668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513086667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e469ca5b9bf06469252e5715c20a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castlePrefabs:
+  - {fileID: 1714873935392641797, guid: 628813f436dc6354596b2ff03515386f, type: 3}
+  levelNames: []
+  wallPrefab: {fileID: 431584535366765058, guid: 0e38dc6332a42ba4a97cda820ead35fc, type: 3}
+  slabPrefab: {fileID: 431584535366765058, guid: b08777d25a336714da3da6dec6c461c0, type: 3}
+  goalPrefab: {fileID: 5016994659074933588, guid: 1be6a820fc362dd4ba29dd3881965b69, type: 3}
+  groundY: -9
+  wallStackStep: 1
+  wallMass: 14
+  slabMass: 18
+  structureDrag: 0.05
+  structureAngularDrag: 1.5
+  structureMaxAngularVelocity: 4
+  levelAdvanceDelay: 2
+  levelIntroDuration: 1.25
+  level: 0
+  shotsThisLevel: 0
+  shotsTotal: 0
+  transitionRemaining: 0
+  introRemaining: 0
+  currentLevelUsesPrefab: 0
+--- !u!4 &1513086669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513086667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566243401
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +941,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 792234108}
+  - {fileID: 1513086669}
   - {fileID: 1572004186}
   - {fileID: 8513401517035048242}
   - {fileID: 1244919826}

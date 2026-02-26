@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f3e469ca5b9bf06469252e5715c20a61
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wallPrefab: {fileID: 431584535366765058, guid: 0e38dc6332a42ba4a97cda820ead35fc, type: 3}
+  - slabPrefab: {fileID: 431584535366765058, guid: b08777d25a336714da3da6dec6c461c0, type: 3}
+  - goalPrefab: {fileID: 5016994659074933588, guid: 1be6a820fc362dd4ba29dd3881965b69, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
